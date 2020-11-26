@@ -23,26 +23,21 @@ function sortString(list) {
       list[i]
     );
   }
-  //   map.forEach((value, key) => {
-  //     console.info(value, key);
-  //   });
   let arr = [];
   for (let key of map.keys()) {
     arr.push(key - 0);
   }
   arr.sort(sortNumber);
   let arrret = [];
-  console.info(map);
   for (let i = 0; i < arr.length; i++) {
     map.forEach((item, key) => {
-    //   console.info(item, key);
       if (arr[i] === key - 0) {
         arrret.push(item);
       }
     });
   }
-  console.info(arrret);
-  return arrret
+  return arrret;
 }
 
-sortString(data); // ["100", "11,000", "99,723", "10,689,025"]
+let ret = sortString(data); // ["100", "11,000", "99,723", "10,689,025"]
+console.info(ret);
