@@ -33,9 +33,12 @@ function sortString(list) {
   arr.sort(sortNumber);
   console.info(map);
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === map.get(arr[i])) {
-      // arr[i] = map.get(arr[i])
-    }
+    map.forEach((item, key) => {
+      console.info(item, key);
+      if (arr[i] === key - 0) {
+        arr[i] === item;
+      }
+    });
   }
   console.info(arr);
 }
