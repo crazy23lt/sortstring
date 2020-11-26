@@ -42,6 +42,7 @@ function sortString(list) {
     });
   }
   console.info(arrret);
+  return arrret
 }
 
 sortString(data); // ["100", "11,000", "99,723", "10,689,025"]
