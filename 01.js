@@ -10,6 +10,9 @@
  */
 
 const data = ["10,689,025", "99,723", "100", "11,000"];
+function sortNumber(a, b) {
+  return a - b;
+}
 function sortString(list) {
   let map = new Map();
   for (let i = 0; i < list.length; i++) {
@@ -20,6 +23,21 @@ function sortString(list) {
       list[i]
     );
   }
+  //   map.forEach((value, key) => {
+  //     console.info(value, key);
+  //   });
+  let arr = [];
+  for (let key of map.keys()) {
+    arr.push(key - 0);
+  }
+  arr.sort(sortNumber);
+  console.info(map);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === map.get(arr[i])) {
+      // arr[i] = map.get(arr[i])
+    }
+  }
+  console.info(arr);
 }
 
 sortString(data); // ["100", "11,000", "99,723", "10,689,025"]
