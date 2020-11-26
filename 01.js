@@ -31,16 +31,17 @@ function sortString(list) {
     arr.push(key - 0);
   }
   arr.sort(sortNumber);
+  let arrret = [];
   console.info(map);
   for (let i = 0; i < arr.length; i++) {
     map.forEach((item, key) => {
-      console.info(item, key);
+    //   console.info(item, key);
       if (arr[i] === key - 0) {
-        arr[i] === item;
+        arrret.push(item);
       }
     });
   }
-  console.info(arr);
+  console.info(arrret);
 }
 
 sortString(data); // ["100", "11,000", "99,723", "10,689,025"]
